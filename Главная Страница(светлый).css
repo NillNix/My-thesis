@@ -1,0 +1,767 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kaushan Script", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header_logo {
+  font-size: 3vh;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: 0.7s;
+}
+
+.header_logo:hover {
+  color: wheat;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  align-items: center;
+  font-size: 1.4vh;
+  text-transform: uppercase;
+}
+
+.nav_link {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s linear;
+  position: relative;
+}
+
+.nav_link:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: wheat;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.nav_link:hover {
+  color: wheat;
+}
+
+.nav_link:hover::after {
+  display: block;
+  opacity: 1;
+}
+
+.btn-toggle {
+  display: none;
+}
+
+.header__btn {
+  margin-left: 2%;
+  font-weight: bold;
+  border-color: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%; /* Прижимаем к верху страницы */
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Цвет фона (можете изменить по желанию) */
+    z-index: 1000; /* Положение над другими элементами */
+    box-sizing: border-box;
+    padding: 20px; /* Отступы для контента навигации */
+    transition: 0.5s;
+  }
+
+  /* Отображение кнопки меню на уменьшенных экранах */
+  .btn-toggle {
+    display: block;
+  }
+
+  .nav.active {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* intro */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  background: url(images/2021-Tesla-Model-Y-Top-Shot.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.intro_title {
+  font-size: 150px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  color: white;
+}
+
+.intro_title:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: white;
+  margin: 220px auto;
+}
+
+.intro_sup_title {
+  margin-bottom: 20px;
+  font-size: 72px;
+  color: black;
+  font-family: "Kaushan Script", cursive;
+  text-align: center;
+}
+
+.intro_inner {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  border: 3px solid white;
+  padding: 8px 30px;
+  margin-bottom: 20%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.5s linear color 0.5s linear;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn-toggle {
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: none;
+  text-decoration: none;
+}
+
+.btn-toggle:hover {
+  color: wheat;
+  border-bottom: 3px solid wheat;
+}
+
+/* slider */
+
+.slider {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.slider_inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider_item,
+.slider_item1,
+.slider_item2,
+.slider_item3 {
+  width: 23%;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  padding: 20px 0;
+  border-top: 3px solid white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.slider_item::before {
+  content: ""; /* Псевдоэлемент должен иметь пустое содержимое */
+  display: block; /* Делаем его блочным элементом */
+  position: absolute; /* Абсолютное позиционирование */
+  top: -100px; /* Расположение иконки относительно верхней грани элемента */
+  left: 500px; /* Расположение иконки по центру элемента */
+  transform: translateX(-50%); /* Центрирование по горизонтали */
+  width: 200px; /* Ширина иконки */
+  height: 100px; /* Высота иконки */
+  background-image: url("images/Tesla model x icon.png"); /* Укажите путь к вашему изображению */
+  background-size: cover; /* Изображение будет заполнять псевдоэлемент полностью */
+  z-index: 1; /* Позволяет нашей иконке быть поверх текста элемента */
+  opacity: 0; /* Начальная непрозрачность (иконка будет скрыта) */
+  transition: opacity 0.3s ease-in-out; /* Плавное появление и исчезновение */
+}
+
+.slider_item:hover::before {
+  opacity: 1;
+}
+
+.slider_item1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -110px;
+  left: 800px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  background-image: url("images/volkswagen_id_4_icon.png");
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slider_item1:hover::before {
+  opacity: 1;
+}
+
+.slider_item2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -140px;
+  left: 1105px;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 150px;
+  background-image: url("images/BMW-iX.png");
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slider_item2:hover::before {
+  opacity: 1;
+}
+
+.slider_item3::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -120px;
+  left: 1400px;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 150px;
+  background-image: url("images/Porsche_Taycan.png");
+  background-size: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slider_item3:hover::before {
+  opacity: 1;
+}
+
+/* section 2 */
+
+.section2 {
+  width: 100%;
+  height: 100%;
+}
+
+.ModelY_section {
+  display: flex;
+  align-items: center;
+}
+
+.background_img_teslaY {
+  width: 50%;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+
+.right_content_modelY {
+  margin: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+
+.h1_A {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.p_A {
+  font-size: 15px;
+  font-weight: bold;
+  width: 50%;
+}
+
+.Model_Y_Order {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 40%;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: 0.2s;
+}
+
+.Model_Y_Order:hover {
+  background-color: black;
+  color: white;
+}
+
+/* section 3 */
+
+.section {
+  width: 100%;
+  height: 100%;
+  margin-top: 5%;
+}
+
+.Taycan_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.top_text {
+  display: flex;
+  justify-content: center;
+}
+
+.left_modul {
+  display: block;
+  margin-right: 5%;
+  margin-top: 1%;
+}
+
+.h1_B {
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Porshe_Order {
+  display: block;
+  width: 250px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  border: 3px solid black;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.Porshe_Order:hover {
+  color: white;
+  background-color: black;
+}
+
+.right_modul {
+  width: 700px;
+}
+
+.p_B {
+  font-size: 15px;
+  font-weight: bold;
+  width: 700px;
+}
+
+video {
+  width: 75%;
+  height: auto;
+}
+
+.video_1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin-top: 2%;
+}
+
+/* section 4 */
+
+.nature_section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.background_img_nature {
+  width: 100%;
+  margin-left: 5%;
+  margin-top: 10%;
+  border-radius: 10px;
+}
+
+.left_modul2 {
+  margin-top: 7%;
+  width: 35%;
+}
+
+.p_B2 {
+  font-size: 15px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.right_modul2 {
+  width: 40%;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 13%;
+  margin-top: 10%;
+}
+
+.footer_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a_footer1 {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+.icon {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.img_icon {
+  width: 50px;
+  height: auto;
+  margin: 20px;
+  margin-bottom: 0;
+}
+
+.p_B3 {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Adaptiv */
+
+@media (max-width: 1500px) {
+  .slider {
+    display: none;
+  }
+
+  .intro_title {
+    font-size: 120px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* section 2 */
+
+  .section2 {
+    padding: 0;
+  }
+
+  .background_img_teslaY {
+    margin-left: 5%;
+  }
+
+  .right_content_modelY {
+    margin: 3%;
+    margin-top: 3%;
+  }
+
+  .p_A {
+    width: 100%;
+  }
+
+  /* section 3 */
+
+  .right_modul {
+    display: none;
+  }
+
+  .left_modul {
+    margin-right: 0;
+  }
+
+  /* section 4 */
+
+  .right_modul2 {
+    width: 40%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    display: none;
+  }
+
+  .intro_title {
+    font-size: 100px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* section 2 */
+
+  .section2 {
+    padding: 0;
+    height: 100%;
+  }
+
+  /* section 4 */
+
+  .p_B2 {
+    text-align: left;
+  }
+
+  .Porshe_Order {
+    width: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  /* section 2 */
+
+  .section2 {
+    padding: 0;
+    height: 100%;
+  }
+
+  .Model_Y_Order {
+    width: 60%;
+  }
+}
+
+@media (max-width: 750px) {
+  /* footer */
+
+  .a_footer1 {
+    display: none;
+  }
+
+  .icon {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .intro_title {
+    font-size: 50px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* section 2 */
+
+  .section2 {
+    height: 100%;
+  }
+
+  /* section 4 */
+
+  .nature_section {
+    flex-direction: column;
+  }
+
+  .background_img_nature {
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 10%;
+    border-radius: 10px;
+  }
+
+  .left_modul2 {
+    margin-top: 7%;
+    width: 100%;
+  }
+
+  .p_B2 {
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  .right_modul2 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  /* section 2 */
+
+  .ModelY_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .background_img_teslaY {
+    width: 70%;
+    margin-left: 5%;
+    margin-top: 10%;
+  }
+
+  .right_content_modelY {
+    margin: 3%;
+    margin-top: 3%;
+  }
+
+  .p_A {
+    width: 100%;
+    text-align: center;
+  }
+
+  .h1_A {
+    text-align: center;
+  }
+
+  .Model_Y_Order {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  /* section 3 */
+
+  .section {
+    margin-top: 10%;
+  }
+
+  .Porshe_Order {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .intro_title {
+    font-size: 50px;
+    margin-bottom: 30%;
+  }
+
+  .intro_title:after {
+    display: none;
+  }
+
+  .btn {
+    margin-top: 70%;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 300px) {
+  .intro_title {
+    font-size: 30px;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .intro_title:after {
+    margin: 150px auto;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .intro_title:after {
+    margin: 100px auto;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See later</title>
+    <link rel="stylesheet" href="See-Later.css">
+    <link rel=" preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="Главная Сстраница.html" class="header_logo">Electronix</a>
+                <nav class="nav" id="navMenu">
+                    <a class="nav_link" href="News.html" data-lang="home_page-70">News</a>
+                    <a class="nav_link" href="#" data-lang="home_page-71">Dealers</a>
+                    <button class="header__btn" data-btn="ru">Ru</button>
+                    <button class="header__btn" data-btn="en">En</button>
+                    <button class="header__btn" data-btn="kz">Kz</button>
+                    <!-- <button class="btn-toggle">Theme</button> -->
+                </nav>
+                <button class="btn-toggle" id="toggleButton">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container_content">
+        <div class="autor">
+            <img class="avatar" src="images/Jason_.jpg" alt="Avatar">
+            <div class="nik_date">
+                <p class="nik">Jason_silver <span> <img class="check_mark" src="images/check mark.png" alt="check mark">
+                    </span> </p>
+            </div>
+        </div>
+
+        <div class="cont2">
+            <p class="your_content" data-lang="home_page-122"> Add an article to watch later... </p>
+        </div>
+    </div>
+
+    <script>
+        const navMenu = document.getElementById('navMenu');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="Главная Сстраница.html" class="header_logo">Electronix</a>
+                <nav class="nav" id="navMenu">
+                    <a class="nav_link" href="News.html" data-lang="home_page-70">News</a>
+                    <a class="nav_link" href="#" data-lang="home_page-71">Dealers</a>
+                    <button class="header__btn" data-btn="ru">Ru</button>
+                    <button class="header__btn" data-btn="en">En</button>
+                    <button class="header__btn" data-btn="kz">Kz</button>
+                    <!-- <button class="btn-toggle">Theme</button> -->
+                </nav>
+                <button class="btn-toggle" id="toggleButton">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+
+    <div class="container_content">
+        <div class="cont1">
+
+            <img class="avatar" src="images/Jason_.jpg" alt="avatar">
+            <div class="info">
+                <a class="nik" href="#">Jason_silver <span> <img class="check_mark" src="images/check mark.png">
+                    </span> </a>
+                <p class="id_name"> @Jason_silver </p>
+                <p class="registration_date" data-lang="home_page-116"> Registration: November 20, 2023</p>
+                <a href="#" class="editing">
+                    <p class="editing_p" data-lang="home_page-117">Edit profile</p><span class="span_icon"> <img
+                            src="images/border_color_FILL0_wght400_GRAD0_opsz24.svg" alt=""></span>
+                </a>
+            </div>
+        </div>
+        <div class="cont2">
+            <p class="your_content" data-lang="home_page-118"> Your content could be here </p>
+            <a href="#" class="editing2" data-lang="home_page-119"> Create a post </a>
+        </div>
+    </div>
+    <script>
+        const navMenu = document.getElementById('navMenu');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

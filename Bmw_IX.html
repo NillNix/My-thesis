@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW iX</title>
+    <link rel="stylesheet" href="Bmw_IX.css">
+    <link rel=" preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="Главная Сстраница.html" class="header_logo" data-lang="home_page-69">Electronix</a>
+                <nav class="nav" id="navMenu">
+                    <a class="nav_link" href="News.html" data-lang="home_page-70">News</a>
+                    <a class="nav_link" href="#" data-lang="home_page-71">Dealers</a>
+                    <button class="header__btn" data-btn="ru">Ru</button>
+                    <button class="header__btn" data-btn="en">En</button>
+                    <button class="header__btn" data-btn="kz">Kz</button>
+                    <!-- <button class="btn-toggle">Theme</button> -->
+                </nav>
+                <button class="btn-toggle" id="toggleButton">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h1 class="intro_title" data-lang="home_page-72">BMW iX</h1>
+                <a class="btn" href="#" data-lang="home_page-73">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- body content -->
+
+    <div class="body_content">
+        <div class="right_block">
+            <h1 class="h1_01" data-lang="home_page-74"> "Stylish, Innovative, Aerodynamic"</h1>
+            <p class="p_01" data-lang="home_page-75">The BMW iX boasts a modern and elegant body that combines style,
+                aerodynamics, and
+                functionality. Its curved lines create a stunning exterior, while innovative elements emphasize its
+                forward-thinking nature. Overall, the exterior of the BMW iX is exceptionally
+                attractive and symbolizes not only innovation in the automotive industry but also the pursuit of
+                perfection in electric vehicle design</p>
+        </div>
+        <img class="body_img" src="images/bmw_body.jpg" alt="BMW iX body">
+    </div>
+
+    <div class="salon_content">
+        <img class="salon_img" src="images/bmw_iX_salon.webp" alt="BMW iX salon">
+        <div class="left_block">
+            <h1 class="h1_01" data-lang="home_page-76">"Luxurious, Innovative, Spacious"</h1>
+            <p class="p_01" data-lang="home_page-77">The BMW iX interior embodies a unique space that combines high
+                comfort levels, innovative
+                technologies, and exquisite design. The use of environmentally friendly materials, such as natural
+                leather and recycled elements, creates an atmosphere of luxury with a special emphasis on sustainability
+            </p>
+        </div>
+    </div>
+
+    <!-- video -->
+
+    <div class="video_1">
+        <video width="640" height="360" controls>
+            <source src="images/Новая BMW iX (2021)_ лидер электрокроссоверов!_ Все подробности.mp4" type="video/mp4">
+            <p data-lang="home_page-78">Ваш браузер не поддерживает видео в формате MP4.</p>
+        </video>
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <div class="footer_section">
+            <a class="a_footer1" href="Privacy Policy.html" target="_blank" data-lang="home_page-79">Privacy Policy</a>
+            <div class="footer_icon">
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_твиттера.png" alt="Twitter icon"
+                        class="img_icon"></a>
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_инсты.png" alt="Instagram icon"
+                        class="img_icon"></a>
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_тиктока.png" alt="Tik_Tok icon"
+                        class="img_icon"></a>
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_телеги.png" alt="Telegram icon"
+                        class="img_icon"></a>
+                <p class="p_B3" data-lang="home_page-80">© 2023. Все права защищены.</p>
+            </div>
+            <a class="a_footer1" href="#" target="_blank" data-lang="home_page-81">Partners</a>
+        </div>
+    </footer>
+
+    <script>
+        const navMenu = document.getElementById('navMenu');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Taycan</title>
+    <link rel="stylesheet" href="Porsche_Taycan.css">
+    <link rel=" preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="Главная Сстраница.html" class="header_logo" data-lang="home_page-69">Electronix</a>
+                <nav class="nav" id="navMenu">
+                    <a class="nav_link" href="News.html" data-lang="home_page-70">News</a>
+                    <a class="nav_link" href="#" data-lang="home_page-71">Dealers</a>
+                    <button class="header__btn" data-btn="ru">Ru</button>
+                    <button class="header__btn" data-btn="en">En</button>
+                    <button class="header__btn" data-btn="kz">Kz</button>
+                </nav>
+                <button class="btn-toggle" id="toggleButton">Menu</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                <h1 class="intro_title" data-lang="home_page-82">Porsche Taycan</h1>
+                <a class="btn"
+                    href="https://www.porsche.com/central-eastern-europe/ru/_kazakhstan_/models/taycan/taycan-models/taycan/"
+                    target="_blank" data-lang="home_page-83">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Taycan Salon -->
+
+    <div class="taycan_salon">
+        <div class="top_content">
+            <div class="left_block">
+                <h1 class="h1_01" data-lang="home_page-84">"Modern luxury, innovative comfort"</h1>
+                <p class="p_01" data-lang="home_page-85">Salon Porsche Taycan is a meticulously crafted space where
+                    luxury meets innovation.
+                    Every detail evokes a sense of modern opulence. High-quality materials such as premium leather,
+                    aluminum, and carbon create an atmosphere of refinement and contemporaneity</p>
+                <a href="#" class="salon_link" data-lang="home_page-86">Go to comparison</a>
+            </div>
+            <img class="salon_img" src="images/Taycan_salon.jpg" alt="Taycan salon">
+        </div>
+        <div class="bottom_content">
+            <div class="video_1">
+                <video width="640" height="360" controls>
+                    <source src="images/The-new-Porsche-Taycan-–-Designed-to-enliven.mp4" type="video/mp4">
+                    <p data-lang="home_page-78">Ваш браузер не поддерживает видео в формате MP4.</p>
+                </video>
+            </div>
+            <div class="right_block">
+                <h1 class="h1_02" data-lang="home_page-87">"Sleek, sporty elegance"</h1>
+                <p class="p_02" data-lang="home_page-88">The body of the Porsche Taycan looks stunning. Its elegant
+                    lines and graceful forms
+                    reflect a sporty sophistication, making its appearance a symbol of cutting-edge automotive
+                    design
+                    and aesthetics. Crafted using advanced technologies and high-quality materials, the Taycan's
+                    body</p>
+                <a href="https://www.porsche.com/central-eastern-europe/ru/_kazakhstan_/models/taycan/taycan-models/taycan/"
+                    target="_blank" class="body_link" data-lang="home_page-89">Select a package</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_section">
+            <a class="a_footer1" href="Privacy Policy.html" target="_blank" data-lang="home_page-79">Privacy Policy</a>
+            <div class="footer_icon">
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_твиттера.png" alt="Twitter icon"
+                        class="img_icon"></a>
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_инсты.png" alt="Instagram icon"
+                        class="img_icon"></a>
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_тиктока.png" alt="Tik_Tok icon"
+                        class="img_icon"></a>
+                <a href="#" target="_blank" class="icon"><img src="images/Значок_телеги.png" alt="Telegram icon"
+                        class="img_icon"></a>
+                <p class="p_B3" data-lang="home_page-80">© 2023. Все права защищены.</p>
+            </div>
+            <a class="a_footer1" href="#" target="_blank" data-lang="home_page-81">Partners</a>
+        </div>
+    </footer>
+
+    <script>
+        const navMenu = document.getElementById('navMenu');
+        const toggleButton = document.getElementById('toggleButton');
+
+        toggleButton.addEventListener('click', function () {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
